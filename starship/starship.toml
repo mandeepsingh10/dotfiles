@@ -4,8 +4,8 @@ add_newline = false
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-success_symbol = '[[  ](fg:#ebeef2)➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = "[[  ](fg:#ebeef2)✖](bold red) "
+success_symbol = '[[ ](fg:#ebeef2)➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[[ ](fg:#ebeef2)✖](bold red) "
 
 [git_branch]
 symbol = " "
@@ -38,7 +38,7 @@ format = "$all_status $ahead_behind"
 disabled = true
 
 [directory]
-format = " [$path ]($style)"
+format = "[$path ]($style)"
 truncation_length = 8
 truncation_symbol = "…/"
 
