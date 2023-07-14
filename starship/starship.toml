@@ -37,11 +37,6 @@ format = "$all_status $ahead_behind"
 [cmd_duration]
 disabled = true
 
-[directory]
-format = "[$path ]($style)"
-truncation_length = 8
-truncation_symbol = "…/"
-
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
