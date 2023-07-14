@@ -1,0 +1,71 @@
+# Move the directory to the second line
+format = """$all$character"""
+add_newline = false
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[[  ](fg:#ebeef2)➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[[  ](fg:#ebeef2)✖](bold red) "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "  "
+ahead = " ×${count} "
+behind = " ×${count} "
+diverged = "     ×${ahead_count}  ×${behind_count} "
+untracked = "  ×${count} "
+stashed = "   "
+modified = " 󰷥 ×${count} "
+staged = "  ×${count} "
+renamed = " 󰏪 ×${count} "
+deleted = " 﫧×${count} "
+style = "bright-white"
+format = "$all_status $ahead_behind"
+
+#[line_break]
+#disabled = true
+
+[cmd_duration]
+disabled = true
+
+[directory]
+format = " [$path ]($style)"
+truncation_length = 8
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"dario" = "󰬋󰬈󰬙󰬐󰬖"
+"msx" = "󰬔󰬚󰬟"
+"git-repos" = ""
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[terraform]
+symbol = "󱁢 "
+#format = "via [$symbol $version]($style) "
+#style = "blue bold"
+#detect_extensions = ["tf", "hcl", "tfstate"]
+#detect_folders = []
+#disabled = false
+
+[aws]
+symbol = '󰸏 '
+format = "on [$symbol using $profile in $region]($style) "
+style = "#F6A21E bold"
+
